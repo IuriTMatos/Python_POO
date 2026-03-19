@@ -1,0 +1,26 @@
+class Pessoa:
+    def __init__(self, nome='', idade=0, profissao=''):
+        self.nome = nome
+        self.idade = idade
+        self.profissao = profissao
+
+    def __str__(self):
+        return f'Nome: {self.nome}, Idade: {self.idade} anos - Profissão: {self.profissao}'
+
+    def aniversario(self):
+        self.idade += 1
+
+    @property
+    def saudacao(self):
+        return f'Olá, meu nome é {self.nome} e eu sou {self.profissao}!'
+    
+p1 = Pessoa("Iuri", 25, "Desenvolvedor")
+
+print(p1)  # usa o __str__
+print("--------------------------------------")
+print(p1.saudacao)
+print("--------------------------------------")
+p1.aniversario()
+print("--------------------------------------")
+print(p1.idade)
+print("--------------------------------------")

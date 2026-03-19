@@ -19,6 +19,7 @@ class Restaurante:
     def ativo(self):
         return "aberto" if self._ativo else "fechado"
 
+    
 restaurante_praca = Restaurante("praça", "Gourmet")
 restaurante_pizza = Restaurante("pizza", "piza")
 
